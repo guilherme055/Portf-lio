@@ -4,59 +4,253 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apresentação Pessoal - João Silva</title>
-  <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1HgBKkE+GJ2Wq3K1IS+ABmt6uxGHt5hMSQKiwOToKHwlR+CohTUNjUCI4HgQmXZf4B3uTwEOr9wHmuQ+02F1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(120deg, #4a90e2, #0072ff);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .profile, .certificates, .social, .contact {
+      margin-top: 50px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile img {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .bio {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .bio h2 {
+      margin-top: 0;
+      color: #0072ff;
+    }
+
+    .certificates h3, .social h3, .contact h3 {
+      color: #0072ff;
+      margin-bottom: 15px;
+    }
+
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .certificate {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .certificate:hover {
+      transform: scale(1.05);
+    }
+
+    .social {
+      text-align: center;
+    }
+
+    .social a {
+      margin: 0 15px;
+      font-size: 2em;
+      color: #0072ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #0056b3;
+    }
+
+    .contact form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      resize: vertical;
+    }
+
+    .contact button {
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      background: #e0e0e0;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .profile {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>Guilherme Israel Becsei</h1>
+    <h1>João Silva</h1>
     <p>Desenvolvedor Front-End | Apaixonado por tecnologia e design</p>
   </header>
 
   <div class="container">
-    <div class="profile">
-      <img src="image.jpg" alt="Foto de Guilherme">
+    <section class="profile">
+      <img src="https://via.placeholder.com/180" alt="Foto de João Silva">
       <div class="bio">
         <h2>Sobre mim</h2>
         <p>
-          Olá! Sou um desenvolvedor com foco em interfaces modernas, acessibilidade e usabilidade. Tenho experiência em React, HTML, CSS, JavaScript e design responsivo. Amo transformar ideias em código e estou sempre em busca de evolução constante.
+          Sou um desenvolvedor com foco em interfaces modernas, acessibilidade e usabilidade. Experiência com React, HTML, CSS, JavaScript e design responsivo.
         </p>
       </div>
-    </div>
+    </section>
 
-    <div class="certificates">
+    <section class="certificates">
       <h3>📜 Certificados</h3>
       <div class="certificate-grid">
         <div class="certificate">
           <strong>HTML & CSS Avançado</strong><br>
-              Udemy - 2023
+          Plataforma X - 2024
         </div>
         <div class="certificate">
-          <strong>Introdução a banco de dados com MySQL & PHPMyAdmin</strong><br>
-          Udemy - 2023
+          <strong>JavaScript Moderno</strong><br>
+          Plataforma Y - 2024
         </div>
         <div class="certificate">
-          <strong>Monitoramento de Apliccações com Prometheus e Grafana</strong><br>
-          Udemy - 2024
+          <strong>React com Hooks</strong><br>
+          Plataforma Z - 2025
         </div>
-       
+        <div class="certificate">
+          <strong>UX/UI Design</strong><br>
+          Curso DesignLab - 2023
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="social">
+    <section class="social">
       <h3>🌐 Minhas redes</h3>
-     <img src="github.png" alt=""> <a href="https://www.linkedin.com/in/guilherme-israel-becsei-677a172a9/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/joaosilva" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/joaosilva" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:joao@email.com" title="Email"><i class="fas fa-envelope"></i></a>
-    </div>
+    </section>
+
+    <section class="contact">
+      <h3>📬 Fale comigo</h3>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </section>
   </div>
 
   <footer>
     &copy; 2025 João Silva. Todos os direitos reservados.
   </footer>
+
+  <!-- Animação Scroll Reveal -->
+  <script>
+    const sections = document.querySelectorAll(".profile, .certificates, .social, .contact");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+  <!-- Formulário básico JS -->
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Mensagem enviada com sucesso! (Simulação)");
+      event.target.reset();
+    }
+  </script>
 
 </body>
 </html>
